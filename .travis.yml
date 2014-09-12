@@ -1,0 +1,18 @@
+language: python
+
+python: 2.7
+
+env:
+  - TOXENV=py27
+  - TOXENV=py34
+  - TOXENV=flake8
+
+install:
+  - travis_retry pip install tox
+
+script:
+  - tox
+
+notifications:
+  email:
+    - team@yesgraph.com
